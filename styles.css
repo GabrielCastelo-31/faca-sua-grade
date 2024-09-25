@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #131313;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 300px;
+}
+
+td, th {
+  width: 400px;
+  /* background-color: red; */
+  border: 1px solid #212121;
+}
+
+td {
+  height: 100px;
+}
+
+tr td:nth-child(1), th {
+  background-color: #212121;
+}
+
+.select-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.select-box {
+  background-color: transparent;
+  /* border: 1px solid #ccc; */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.select-options-container {
+  display: none;
+  position: absolute;
+  background-color: #252525;
+  max-height: 300px;
+  overflow-y: auto;
+  /* border: 1px solid #ccc; */
+  z-index: 1;
+  width: inherit;
+}
+
+.select-box:focus+.select-options-container,
+.select-options-container:active {
+  display: block;
+}
+
+.select-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 125px; */
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-option:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: start;
+}
+
+.semesterLesson {
+  list-style-type: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.semesterLesson > label {
+  margin-left: 10px;
+}
+
+h1 {
+  margin-top: 16px;
+}

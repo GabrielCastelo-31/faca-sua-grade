@@ -1,0 +1,378 @@
+[
+  [
+    {
+      "code": "CIC0004",
+      "name": "ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "FGA0163",
+      "name": "INTRODUÇÃO À ENGENHARIA",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "FGA0168",
+      "name": "DESENHO INDUSTRIAL ASSISTIDO POR COMPUTADOR",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "FGA0302",
+      "name": "ENGENHARIA E AMBIENTE",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "MAT0025",
+      "name": "CÁLCULO 1",
+      "requirements": [
+        "-"
+      ]
+    }
+  ],
+  [
+    {
+      "code": "FGA0157",
+      "name": "PROBABILIDADE E ESTATÍSTICA APLICADO A ENGENHARIA",
+      "requirements": [
+        "MAT0025"
+      ]
+    },
+    {
+      "code": "IFD0171",
+      "name": "FISICA 1",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "IFD0173",
+      "name": "FISICA 1 EXPERIMENTAL",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "MAT0026",
+      "name": "CÁLCULO 2",
+      "requirements": [
+        "MAT0025",
+        "MAT0024",
+        "OU"
+      ]
+    },
+    {
+      "code": "MAT0031",
+      "name": "INTRODUCAO A ALGEBRA LINEAR",
+      "requirements": [
+        "-"
+      ]
+    }
+  ],
+  [
+    {
+      "code": "FGA0071",
+      "name": "PRÁTICA DE ELETRÔNICA DIGITAL 1",
+      "requirements": [
+        "MAT0031"
+      ]
+    },
+    {
+      "code": "FGA0073",
+      "name": "TEORIA DE ELETRÔNICA DIGITAL 1",
+      "requirements": [
+        "MAT0031"
+      ]
+    },
+    {
+      "code": "FGA0085",
+      "name": "MATEMÁTICA DISCRETA 1",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "FGA0133",
+      "name": "ENGENHARIA ECONÔMICA",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "FGA0158",
+      "name": "ORIENTAÇÃO A OBJETOS",
+      "requirements": [
+        "CIC0004",
+        "CIC0007",
+        "OU"
+      ]
+    },
+    {
+      "code": "FGA0160",
+      "name": "MÉTODOS NUMÉRICOS PARA ENGENHARIA",
+      "requirements": [
+        "MAT0026"
+      ]
+    },
+    {
+      "code": "FGA0164",
+      "name": "HUMANIDADES E CIDADANIA",
+      "requirements": [
+        "-"
+      ]
+    }
+  ],
+  [
+    {
+      "code": "FGA0108",
+      "name": "MATEMÁTICA DISCRETA 2",
+      "requirements": [
+        "FGA0085",
+        "FGA0159",
+        "OU"
+      ]
+    },
+    {
+      "code": "FGA0142",
+      "name": "FUNDAMENTOS DE ARQUITETURA DE COMPUTADORES",
+      "requirements": [
+        "ENE0277",
+        "FGA0071",
+        "FGA0073",
+        "E",
+        "OU"
+      ]
+    },
+    {
+      "code": "FGA0146",
+      "name": "ESTRUTURAS DE DADOS 1",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "FGA0303",
+      "name": "PROJETO INTEGRADOR DE ENGENHARIA 1",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "FGA0307",
+      "name": "GESTÃO DA PRODUÇÃO E QUALIDADE",
+      "requirements": [
+        "FGA0133"
+      ]
+    },
+    {
+      "code": "FGA0312",
+      "name": "MÉTODOS DE DESENVOLVIMENTO DE SOFTWARE",
+      "requirements": [
+        "FGA0158"
+      ]
+    }
+  ],
+  [
+    {
+      "code": "FGA0003",
+      "name": "COMPILADORES 1",
+      "requirements": [
+        "FGA0146"
+      ]
+    },
+    {
+      "code": "FGA0030",
+      "name": "ESTRUTURAS DE DADOS 2",
+      "requirements": [
+        "FGA0146"
+      ]
+    },
+    {
+      "code": "FGA0137",
+      "name": "SISTEMAS DE BANCO DE DADOS 1",
+      "requirements": [
+        "FGA0159",
+        "FGA0108",
+        "OU"
+      ]
+    },
+    {
+      "code": "FGA0170",
+      "name": "FUNDAMENTOS DE SISTEMAS OPERACIONAIS",
+      "requirements": [
+        "FGA0182",
+        "FGA0096",
+        "OU",
+        "FGA0142",
+        "OU"
+      ]
+    },
+    {
+      "code": "FGA0173",
+      "name": "INTERAÇÃO HUMANO COMPUTADOR",
+      "requirements": [
+        "FGA0138",
+        "FGA0312",
+        "OU"
+      ]
+    },
+    {
+      "code": "FGA0313",
+      "name": "REQUISITOS DE SOFTWARE",
+      "requirements": [
+        "FGA0312"
+      ]
+    }
+  ],
+  [
+    {
+      "code": "FGA0060",
+      "name": "SISTEMAS DE BANCO DE DADOS 2",
+      "requirements": [
+        "FGA0137"
+      ]
+    },
+    {
+      "code": "FGA0124",
+      "name": "PROJETO DE ALGORITMOS",
+      "requirements": [
+        "FGA0146"
+      ]
+    },
+    {
+      "code": "FGA0208",
+      "name": "ARQUITETURA E DESENHO DE SOFTWARE",
+      "requirements": [
+        "FGA0172",
+        "FGA0313",
+        "OU"
+      ]
+    },
+    {
+      "code": "FGA0211",
+      "name": "FUNDAMENTOS DE REDES DE COMPUTADORES",
+      "requirements": [
+        "FGA0170"
+      ]
+    },
+    {
+      "code": "FGA0314",
+      "name": "TESTES DE SOFTWARE",
+      "requirements": [
+        "FGA0313"
+      ]
+    },
+    {
+      "code": "FGA0315",
+      "name": "QUALIDADE DE SOFTWARE 1",
+      "requirements": [
+        "FGA0173",
+        "FGA0307",
+        "E"
+      ]
+    }
+  ],
+  [
+    {
+      "code": "FGA0109",
+      "name": "FUNDAMENTOS DE SISTEMAS EMBARCADOS",
+      "requirements": [
+        "FGA0170"
+      ]
+    },
+    {
+      "code": "FGA0210",
+      "name": "PARADIGMAS DE PROGRAMAÇÃO",
+      "requirements": [
+        "FGA0158",
+        "FGA0003",
+        "E"
+      ]
+    },
+    {
+      "code": "FGA0242",
+      "name": "TÉCNICAS DE PROGRAMAÇÃO EM PLATAFORMAS EMERGENTES",
+      "requirements": [
+        "FGA0208",
+        "FGA0238",
+        "FGA0314",
+        "OU",
+        "E"
+      ]
+    },
+    {
+      "code": "FGA0244",
+      "name": "PROGRAMAÇÃO PARA SISTEMAS PARALELOS E DISTRIBUÍDOS",
+      "requirements": [
+        "FGA0211",
+        "FGA0030",
+        "E"
+      ]
+    }
+  ],
+  [
+    {
+      "code": "FGA0288",
+      "name": "ESTÁGIO SUPERVISIONADO",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "FGA0316",
+      "name": "ENGENHARIA DE PRODUTO DE SOFTWARE",
+      "requirements": [
+        "FGA0242"
+      ]
+    },
+    {
+      "code": "FGA0317",
+      "name": "GERÊNCIA DE CONFIGURAÇÃO E EVOLUÇÃO DE SOFTWARE",
+      "requirements": [
+        "FGA0314"
+      ]
+    }
+  ],
+  [
+    {
+      "code": "FGA0287",
+      "name": "TRABALHO DE CONCLUSÃO DE CURSO 1",
+      "requirements": [
+        "-"
+      ]
+    },
+    {
+      "code": "FGA0304",
+      "name": "PROJETO INTEGRADOR DE ENGENHARIA 2",
+      "requirements": [
+        "FGA0150",
+        "FGA0303",
+        "OU"
+      ]
+    }
+  ],
+  [
+    {
+      "code": "FGA0290",
+      "name": "TRABALHO DE CONCLUSÃO DE CURSO 2",
+      "requirements": [
+        "FGA0287",
+        "FGA0009",
+        "OU"
+      ]
+    },
+    {
+      "code": "FGA0318",
+      "name": "ATIVIDADE DE EXTENSÃO ENGENHARIA DE SOFTWARE",
+      "requirements": [
+        "-"
+      ]
+    }
+  ]
+]
