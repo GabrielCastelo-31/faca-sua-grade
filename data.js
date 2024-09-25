@@ -157,14 +157,14 @@ const curriculum = ([
       ]
     },
     {
-      "code": "FGA0303",
+      "code": "FGA0150",
       "name": "PROJETO INTEGRADOR DE ENGENHARIA 1",
       "requirements": [
         "-"
       ]
     },
     {
-      "code": "FGA0307",
+      "code": "FGA0184",
       "name": "GESTÃO DA PRODUÇÃO E QUALIDADE",
       "requirements": [
         "FGA0133"
@@ -414,7 +414,7 @@ const nicknames = {
   "FGA0142": "FAC",
   "FGA0146": "EDA1",
   "FGA0303": "PI1",
-  "FGA0307": "GPEQ",
+  "FGA0184": "GPEQ",
   "FGA0312": "MDS",
   "FGA0003": "Compiladores",
   "FGA0030": "EDA2",
