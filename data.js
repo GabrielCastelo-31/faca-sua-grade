@@ -935,19 +935,15 @@ class Grade {
           return;
         }
 
-        if (!classes[m.code]) {
-          return;
-        }
+        classes[m.code]?.forEach(c => {
+          if (c.schedules.some(([i, j]) => i > 5 || j > 5)) {
+            return;
+          }
 
-        classes[m.code].forEach(c => {
           c.schedules.forEach(([i, j]) => {
-            if (i > 5 || j > 5) {
-              return;
-            }
-
             this.#possibleValues[i][j].push(c);
           })
-        })
+        });
       })
 
     });

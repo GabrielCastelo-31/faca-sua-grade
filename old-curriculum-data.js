@@ -939,15 +939,15 @@ class Grade {
           return;
         }
 
-        classes[m.code].forEach(c => {
-          c.schedules.forEach(([i, j]) => {
-            if (i > 5 || j > 5) {
-              return;
-            }
+        classes[m.code]?.forEach(c => {
+          if (c.schedules.some(([i, j]) => i > 5 || j > 5)) {
+            return;
+          }
 
+          c.schedules.forEach(([i, j]) => {
             this.#possibleValues[i][j].push(c);
           })
-        })
+        });
       })
 
     });
