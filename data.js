@@ -273,8 +273,6 @@ const curriculum = ([
       "name": "QUALIDADE DE SOFTWARE 1",
       "requirements": [
         "FGA0173",
-        "FGA0307",
-        "E"
       ]
     }
   ],
@@ -802,9 +800,13 @@ class Grade {
       if (token === "-") {
         stack.push(true);
       } else if (token === "E") {
-        stack.push(stack.pop() && stack.pop());
+        const a = stack.pop();
+        const b = stack.pop();
+        stack.push(a && b);
       } else if (token === "OU") {
-        stack.push(stack.pop() || stack.pop());
+        const a = stack.pop();
+        const b = stack.pop();
+        stack.push(a || b);
       } else {
         stack.push(this.#isDone[token] ?? false);
       }
