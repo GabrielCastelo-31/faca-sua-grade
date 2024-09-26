@@ -273,6 +273,8 @@ const curriculum = ([
       "name": "QUALIDADE DE SOFTWARE 1",
       "requirements": [
         "FGA0173",
+        "FGA0133",
+        "E",
       ]
     }
   ],
@@ -871,7 +873,6 @@ class Grade {
     }
 
     for (const [i, j] of lesson.schedules) {
-      console.log(i, j);
       if (this.#grade[i][j].attributeStyleMap.get("background-color")) {
         this.#grade[i][j].attributeStyleMap.set("background-color", "#ff7c40"); // yellow
       } else {
@@ -1112,7 +1113,45 @@ class Grade {
     this.#table.replaceWith(this.getTable(true));
   }
 
+  #healthyCheckRequirements() {
+    const tmp = this.#isDone;
+
+    this.#isDone = {};
+    curriculum.forEach(s => {
+      s.forEach(m => {
+        this.#isDone[m.code] = true;
+      })
+    });
+
+    const errors = [];
+    curriculum.forEach(s => {
+      s.forEach(m => {
+        if (!this.#haveRequirements(m.code)) {
+          errors.push({ code: m.code, name: m.name });
+        }
+      })
+    });
+    if (errors.length) {
+      throw new Error("Impossible requirements for " + JSON.stringify(errors));
+    }
+
+    this.#isDone = tmp;
+  }
+
+  #healthyCheckLessons() {
+    curriculum.forEach((semester) => {
+      semester.forEach((lesson) => {
+        if (!classes[lesson.code]) {
+          console.warn("Lesson does not have any class: " + lesson.name);
+        }
+      });
+    });
+  }
+
   constructor() {
+    this.#healthyCheckRequirements();
+    this.#healthyCheckLessons()
+
     this.#isDone = window.localStorage.getItem("isDone");
     if (!this.#isDone) {
       this.#isDone = {};
