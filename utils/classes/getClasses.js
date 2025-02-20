@@ -1,5 +1,9 @@
 // Copy this file to the console and run it on the page below, after selecting the university you want to scrape
 // https://sigaa.unb.br/sigaa/public/turmas/listar.jsf
+// FGA: 672 
+// IF: 524
+// MAT: 518 
+// CIC: 508
 
 function getClasses() {
   /**
