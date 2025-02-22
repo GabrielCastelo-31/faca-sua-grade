@@ -1046,7 +1046,6 @@ class Grade {
       return gradeRows;
     });
 
-    console.log("selected:",this.#selectedClasses);
     this.#selectedClasses.forEach(id => {
       this.#chooseClassById(id);
     });
