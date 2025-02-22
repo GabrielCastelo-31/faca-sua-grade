@@ -1,9 +1,9 @@
 // Copy this file to the console and run it on the page below, after selecting the university you want to scrape
 // https://sigaa.unb.br/sigaa/public/turmas/listar.jsf
-// FGA: 673 
-// IF: 524
-// MAT: 518 
-// CIC: 508
+// FGA: document.querySelector("#formTurma\\:inputDepto").value = "673"
+// CIC: document.querySelector("#formTurma\\:inputDepto").value = "508"
+// MAT: document.querySelector("#formTurma\\:inputDepto").value = "518"
+// IF: document.querySelector("#formTurma\\:inputDepto").value = "524"
 
 function getClasses() {
   /**
@@ -33,6 +33,12 @@ function getClasses() {
     const classNum = parseInt(tr.children[0].innerText);
     /** @type {string} */
     let teacher = tr.children[2].innerText.split(" ").slice(0, -1).join(" ").trim();
+
+    if(document.querySelector("#formTurma\\:inputDepto").value !== "673") {
+      if(!tr.children[7].innerText.includes("FCTE")) {
+        return;
+      }
+    }
 
     /** @type {[number, number][]} */ 
     const schedules = tr.children[3].children[1].children[0].innerHTML.trim().split("<br>")
