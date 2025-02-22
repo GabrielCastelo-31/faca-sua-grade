@@ -990,7 +990,7 @@ class Grade {
 
         const selectBox = document.createElement("button");
         selectBox.classList.add("select-box");
-        selectBox.innerText = "-";
+        selectBox.innerText = lessons.length ? "-" : "🔒";
         selectContainer.appendChild(selectBox);
 
         const selectOptionsContainer = document.createElement("div");
@@ -1046,6 +1046,7 @@ class Grade {
       return gradeRows;
     });
 
+    console.log("selected:",this.#selectedClasses);
     this.#selectedClasses.forEach(id => {
       this.#chooseClassById(id);
     });
@@ -1083,6 +1084,14 @@ class Grade {
 
         checkbox.addEventListener("change", async (event) => {
           this.#isDone[lesson.code] = event.target.checked;
+          if(event.target.checked) {
+            Array.from(this.#selectedClasses).forEach(v => {
+              if(this.#isDone[v.slice(0, -1)]) {
+                console.log("deletei", v);
+                this.#selectedClasses.delete(v);
+              }
+            });
+          }
           this.#saveLocalStorage();
 
           label.style.textDecoration = event.target.checked ? "line-through" : "none";
@@ -1169,8 +1178,17 @@ class Grade {
     if (!this.#selectedClasses) {
       this.#selectedClasses = new Set();
     } else {
-      this.#selectedClasses = new Set(JSON.parse(this.#selectedClasses));
+      /**@type Set<string> */
+      const selectedClassesSaved = new Set(JSON.parse(this.#selectedClasses));
+      Array.from(selectedClassesSaved).forEach(v => {
+        if(this.#isDone[v.slice(0, -1)]) {
+          selectedClassesSaved.delete(v);
+        }
+      })
+      this.#selectedClasses = selectedClassesSaved;
     }
+    console.log(this.#isDone);
+    console.log(this.#selectedClasses);
     this.#saveLocalStorage();
   }
 }
