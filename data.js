@@ -1084,10 +1084,9 @@ class Grade {
 
         checkbox.addEventListener("change", async (event) => {
           this.#isDone[lesson.code] = event.target.checked;
-          if(event.target.checked) {
+          if (this.#isDone[lesson.code] || !this.#haveRequirements(lesson.code)) {
             Array.from(this.#selectedClasses).forEach(v => {
-              if(this.#isDone[v.slice(0, -1)]) {
-                console.log("deletei", v);
+              if(this.#isDone[v.slice(0, 7)]) {
                 this.#selectedClasses.delete(v);
               }
             });
@@ -1181,14 +1180,12 @@ class Grade {
       /**@type Set<string> */
       const selectedClassesSaved = new Set(JSON.parse(this.#selectedClasses));
       Array.from(selectedClassesSaved).forEach(v => {
-        if(this.#isDone[v.slice(0, -1)]) {
+        if(this.#isDone[v.slice(0, 7)] || !this.#haveRequirements(v.slice(0, 7))) {
           selectedClassesSaved.delete(v);
         }
       })
       this.#selectedClasses = selectedClassesSaved;
     }
-    console.log(this.#isDone);
-    console.log(this.#selectedClasses);
     this.#saveLocalStorage();
   }
 }
