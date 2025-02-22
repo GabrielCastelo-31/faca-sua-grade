@@ -15,6 +15,10 @@
   </div>
   
   <script>
+    if(window.innerWidth < window.innerHeight) {
+      alert("Esse site é feito para funcionar apenas em computadores. Celulares podem trazer uma má experiência.")
+    }
+
     function loadScript(src) {
       const script = document.createElement('script');
       script.src = src + '?v=' + new Date().getTime();

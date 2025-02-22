@@ -996,6 +996,11 @@ class Grade {
       this.#isDone = {};
     } else {
       this.#isDone = JSON.parse(this.#isDone);
+      Object.entries(this.#isDone).forEach(([k, v]) => {
+        if(!v) {
+          delete this.#isDone[k];
+        }
+      })
     }
 
     this.#selectedClasses = window.localStorage.getItem("selectedClasses");
