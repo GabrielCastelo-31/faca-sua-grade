@@ -32,7 +32,11 @@ function getClasses() {
 
     const classNum = parseInt(tr.children[0].innerText);
     /** @type {string} */
-    let teacher = tr.children[2].innerText.split(" ").slice(0, -1).join(" ").trim();
+    let teacher = tr.children[2].innerText.split(/\(\d\dh\)/g).slice(0, -1)
+    .map(e => {
+      const teacherName = e.trim();
+      return teacherName.split(" ").map(v => v.charAt(0).toUpperCase() + v.slice(1).toLowerCase()).join(" ");
+    }).join(" e ");
 
     if(document.querySelector("#formTurma\\:inputDepto").value !== "673") {
       if(!tr.children[7].innerText.includes("FCTE")) {
