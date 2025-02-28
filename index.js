@@ -6,7 +6,7 @@ window.onload = async () => {
   const table = grade.getTable();
 
   const description = document.createElement("h1");
-  description.innerHTML = "Turmas atualizadas no dia 25/02/2025 às 18:49";
+  description.innerHTML = "Turmas atualizadas no dia 27/02/2025 às 21:00";
 
   const list = grade.getList();
   root.appendChild(list);
