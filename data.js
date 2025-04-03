@@ -164,14 +164,14 @@ const curriculum = ([
       ]
     },
     {
-      "code": "FGA0184",
+      "code": "FGA0307",
       "name": "GESTÃO DA PRODUÇÃO E QUALIDADE",
       "requirements": [
         "FGA0133"
       ]
     },
     {
-      "code": "FGA0138",
+      "code": "FGA0312",
       "name": "MÉTODOS DE DESENVOLVIMENTO DE SOFTWARE",
       "requirements": [
         "FGA0158"
@@ -217,16 +217,16 @@ const curriculum = ([
       "code": "FGA0173",
       "name": "INTERAÇÃO HUMANO COMPUTADOR",
       "requirements": [
-        "FGA0138",
-        "FGA0138",
+        "FGA0312",
+        "FGA0312",
         "OU"
       ]
     },
     {
-      "code": "FGA0172",
+      "code": "FGA0313",
       "name": "REQUISITOS DE SOFTWARE",
       "requirements": [
-        "FGA0138"
+        "FGA0312"
       ]
     }
   ],
@@ -249,8 +249,8 @@ const curriculum = ([
       "code": "FGA0208",
       "name": "ARQUITETURA E DESENHO DE SOFTWARE",
       "requirements": [
-        "FGA0172",
-        "FGA0172",
+        "FGA0313",
+        "FGA0313",
         "OU"
       ]
     },
@@ -262,14 +262,14 @@ const curriculum = ([
       ]
     },
     {
-      "code": "FGA0238",
+      "code": "FGA0314",
       "name": "TESTES DE SOFTWARE",
       "requirements": [
-        "FGA0172"
+        "FGA0313"
       ]
     },
     {
-      "code": "FGA0278",
+      "code": "FGA0315",
       "name": "QUALIDADE DE SOFTWARE 1",
       "requirements": [
         "FGA0173",
@@ -300,8 +300,8 @@ const curriculum = ([
       "name": "TÉCNICAS DE PROGRAMAÇÃO EM PLATAFORMAS EMERGENTES",
       "requirements": [
         "FGA0208",
-        "FGA0238",
-        "FGA0238",
+        "FGA0314",
+        "FGA0314",
         "OU",
         "E"
       ]
@@ -325,17 +325,17 @@ const curriculum = ([
       ]
     },
     {
-      "code": "FGA0206",
+      "code": "FGA0316",
       "name": "ENGENHARIA DE PRODUTO DE SOFTWARE",
       "requirements": [
         "FGA0242"
       ]
     },
     {
-      "code": "FGA0240",
+      "code": "FGA0317",
       "name": "GERÊNCIA DE CONFIGURAÇÃO E EVOLUÇÃO DE SOFTWARE",
       "requirements": [
-        "FGA0238"
+        "FGA0314"
       ]
     }
   ],
@@ -348,7 +348,7 @@ const curriculum = ([
       ]
     },
     {
-      "code": "FGA0250",
+      "code": "FGA0304",
       "name": "PROJETO INTEGRADOR DE ENGENHARIA 2",
       "requirements": [
         "FGA0150",
@@ -384,14 +384,14 @@ const nicknames = {
   "FGA0160": "Metodos",
   "FGA0210": "Paradigmas",
   "FGA0211": "Redes",
-  "FGA0278": "Qualidades",
+  "FGA0315": "Qualidades",
   "FGA0164": "HC",
-  "FGA0206": "EPS",
+  "FGA0316": "EPS",
   "FGA0109": "Embarcados",
-  "FGA0250": "PI2",
+  "FGA0304": "PI2",
   "FGA0150": "PI1",
   "FGA0242": "TPPE",
-  "FGA0240": "GCES",
+  "FGA0317": "GCES",
   "FGA0303": "PI1",
   "FGA0288": "Estágio",
   "FGA0287": "TCC1",
@@ -414,20 +414,20 @@ const nicknames = {
   "FGA0142": "FAC",
   "FGA0146": "EDA1",
   "FGA0303": "PI1",
-  "FGA0184": "GPEQ",
-  "FGA0138": "MDS",
+  "FGA0307": "GPEQ",
+  "FGA0312": "MDS",
   "FGA0003": "Compiladores",
   "FGA0030": "EDA2",
   "FGA0137": "SBD1",
   "FGA0170": "FSO",
   "FGA0173": "IHC",
-  "FGA0172": "Requisitos",
+  "FGA0313": "Requisitos",
   "FGA0208": "Arquitetura",
-  "FGA0238": "Testes",
+  "FGA0314": "Testes",
   "FGA0244": "PSPD",
   "FGA0288": "Estágio",
   "FGA0287": "TCC1",
-  "FGA0250": "PI2",
+  "FGA0304": "PI2",
   "FGA0290": "TCC2",
   "FGA0318": "Extensão",
 };

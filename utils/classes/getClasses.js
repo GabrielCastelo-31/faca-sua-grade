@@ -70,6 +70,8 @@ async function getClasses() {
       }
 
       const classNum = parseInt(tr.children[0].innerText);
+      const local = tr.children[7].innerText.trim().split(" - ")[0];
+      console.log(`"${local}"`);
       /** @type {string} */
       let teacher = tr.children[2].innerText.split(/\(\d\dh\)/g).slice(0, -1)
         .map(e => {
