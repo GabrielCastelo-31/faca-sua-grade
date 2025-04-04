@@ -71,7 +71,6 @@ async function getClasses() {
 
       const classNum = parseInt(tr.children[0].innerText);
       const local = tr.children[7].innerText.trim().split(" - ")[0];
-      console.log(`"${local}"`);
       /** @type {string} */
       let teacher = tr.children[2].innerText.split(/\(\d\dh\)/g).slice(0, -1)
         .map(e => {
@@ -88,12 +87,24 @@ async function getClasses() {
       /** @type {[number, number][]} */
       const schedules = tr.children[3].children[1].children[0].innerHTML.trim().split("<br>")
         .filter(e => e.trim())
-        .map(time => {
-          const [dia, horario] = time.trim().split(" ");
-          const j = translateDayToIndex[dia];
-          const i = (parseInt(horario.split(":")[0]) - 8) >> 1;
+        .flatMap(time => {
+          let [dia, horarioInicio, _, horarioFim] = time.trim().split(" ");
+          horarioInicio = parseInt(horarioInicio.split(":")[0]);
+          horarioFim = parseInt(horarioFim.split(":")[0]);
 
-          return [i, j];
+          /**@type [Number, number][] */
+          const schedules = [];
+          for (let horario = horarioInicio; horario < horarioFim; horario += 2) {
+            const j = translateDayToIndex[dia];
+            const i = (horario-8) >> 1;
+
+            schedules.push([i, j]);
+          }
+          if(code === "FGA0242") {
+            console.log({schedules, time});
+          }
+
+          return schedules;
         });
 
       classes[code] ??= [];
